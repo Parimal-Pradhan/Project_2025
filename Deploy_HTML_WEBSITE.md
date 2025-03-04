@@ -123,27 +123,34 @@ pipeline {
 3. Choose **Git**.
 4. Enter **GitHub Repo URL**:  
 
-   https://github.com/your-repo/static-website.git
+   https://github.com/your-repo/static-website.git](https://github.com/Parimal-Pradhan/![pipe2](https://github.com/user-attachments/assets/52cb5569-12ac-4a0b-8e36-82db26761afe)
+cafe_web.git
    
 5. Set **Branch**: `main`
+![pipe4](https://github.com/user-attachments/assets/dbd7a786-728c-450d-95a0-fa55f874a394)
+
+
 6. Define **Script Path**: `Jenkinsfile`
 7. Click **Save**.
+![pipe5](https://github.com/user-attachments/assets/75006a8e-8229-42ef-952a-cc69a4a8b86f)
+
+
 
 ---
 
 ## **Step 5: Trigger Deployment**
 1. **Push Code** to GitHub.
+   git push origin main
 2. **Webhook triggers Jenkins**.
 3. **Jenkins runs pipeline**.
 4. **Static site is deployed to Apache**.
 5. Open:
    ```
-   http://<EC2-Public-IP>
+   3.88.174.44:80
+
+   ![downimg](https://github.com/user-attachments/assets/b4f383f6-eb81-4a54-bf18-5ee924d7c14c)
+
    ```
-
----
-
-You're getting this error because **Jenkins runs as a non-root user**, and `sudo` requires a password. Since Jenkins runs in a non-interactive environment, it cannot prompt for a password.
 
 ---
 
@@ -172,8 +179,6 @@ This allows Jenkins to run `rm`, `cp`, and `systemctl` **without a password**.
 - Press **Ctrl + X**, then **Y**, and hit **Enter**.
 
 ---
-
-
 ---
 
 ### **Step 4: Restart Jenkins**
@@ -188,6 +193,8 @@ sudo systemctl restart jenkins
 - **Push the code** to GitHub.
 - **Webhook triggers Jenkins**.
 - **Jenkins deploys the website successfully! 🚀**
+  ![downimg](https://github.com/user-attachments/assets/fa656fa9-9fd5-46c9-aa5f-ceeeaef0ec7b)
+
 
 Now, your **static website will deploy automatically** without any password issues.
 
